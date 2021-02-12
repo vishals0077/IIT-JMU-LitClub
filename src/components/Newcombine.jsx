@@ -8,6 +8,8 @@ import Getst from "./Getstarted";
 import Whatwedo from "./Service";
 import Contactus from "./Contact";
 import "./Event.css"
+import { Col, Row,Image } from "react-bootstrap";
+
 
 function Whole()
 {
@@ -16,17 +18,18 @@ function Whole()
     //     borderBottom: "2px solid #fcebe3"
     //   };
     const [customStyle,setCustomstyle]=useState( {
-        background: "#fff",
+        background: "#fef8f5",
         borderBottom: "2px solid #fcebe3"
       });  
     return(
         <div>     
            <Header/>            
            
-                    <div id="social" style={{background:customStyle.background,paddingTop:"60px"}}>
+                    <div id="social" style={{background:customStyle.background,paddingTop:"60px", zIndex:"100",
+    position:"relative"}}>
                     <button type="button" className="smGlobalBtn facebookBtn" onClick={(e)=>{ setCustomstyle({...customStyle,background:"#fef8f5"})  }}></button>
                     <button type="button" className="smGlobalBtn linkedinBtn" onClick={(e)=>{ setCustomstyle({...customStyle,background:"#FFFFFF"})  }}></button>
-                    <button type="button" className="smGlobalBtn instagramBtn" onClick={(e)=>{ setCustomstyle({...customStyle,background:"#cffffe "})  }}></button>
+                    <button type="button" className="smGlobalBtn instagramBtn" onClick={(e)=>{ setCustomstyle({...customStyle,background:"antiquewhite"})  }}></button>
                     </div>
           
            <Getst color={customStyle.background} border={customStyle.borderBottom}/>
@@ -35,17 +38,14 @@ function Whole()
             <Bosses border={customStyle.borderBottom}/>
             <Teams color={customStyle.background} border={customStyle.borderBottom}/> 
             <Contactus border={customStyle.borderBottom}/>
-            <div style={{background:customStyle.background,padding:"60px 0px",textAlign:"center"}}>
-                <h2 style={{fontSize: "24px",fontWeight: "700",paddingBottom: "0",lineHeight: "1px",marginBottom: "15px",color: "#c2b7b1"}}>Meet the Developer</h2>
+            <div style={{background:customStyle.background,padding:"60px 0px",textAlign:"center"}} className="section-title" data-aos="fade-up" id="developer">
                 <footer>
-                    <div id="social">
-                    <a className="smGlobalBtn linkedinBtn" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/sufyan-khan-1709081a5/" ><i className="fa fa-linkedin"></i></a>
-                    <a className="smGlobalBtn instagramBtn" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/sufyan_._._/" ><i className="fa fa-instagram"></i></a>
-                    </div>
+                <Row>
+                <Col md={12} style={{opacity:"0.2",textDecoration:"none"}}>Copyright &copy; <a href="https://www.linkedin.com/in/sufyan-khan-1709081a5/" target="_blank" rel="noopener noreferrer" style={{textDecoration:"none",color:"black"}}>AlmightyStranger</a></Col>
+                    
+                </Row>
                 </footer>
-                <div>
-                <h6 style={{color:"rgb(194, 183, 177)",fontWeight:"300",fontSize:"20px"}}>Contact me at <span style={{fontWeight:"400"}}>sufyankhan9678@gmail.com</span></h6>
-                </div>
+               
             </div>
             
         </div>

@@ -11,7 +11,6 @@ function Header()
       <div className="logo mr-auto">
         <h1 className="text-light"><a href="/" alt="Literary Club"><span style={{fontWeight:"500",color:"rgb(194, 183, 177)"}}>Literary Club</span></a></h1>
       </div>
-
       <nav className="nav-menu d-none d-lg-block">
         <ul>
           <li className="active"><a href="#hero">Home</a></li>
@@ -22,6 +21,11 @@ function Header()
           <li><a href="#contact">Contact Us</a></li>
         </ul>
       </nav>
+      <a href="#developer" style={{color: "black",
+    fontSize: "23px",
+    marginRight: "auto",
+    marginLeft: "10px",
+    marginTop:"4px"}}><i className="fa fa-user-secret"></i></a>
       <Link to={`/gallery`} ><button type="button" className="btn btn-dark">Gallery</button></Link>
     </div>
   </header>
